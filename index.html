@@ -1,0 +1,66 @@
+<!-- 
+  Prompt: 
+  Make a simple Rock Paper Scissors game using HTML, CSS, and JS.
+
+  - Add a heading at the top.
+  - Then a scoreboard section with “You” and “Computer” and their scores.
+    Put a “vs” circle in the center of them.
+  - Show the round number like “Round 1/5”.
+  - Below that, have 3 buttons with emoji and names (rock, paper, scissors).
+  - After that, show what the user and computer picked (like a display area).
+  - Then add a message area that shows who won or lost the round.
+  - Also add a reset button to start again.
+
+  Use good class and id names so styling and JS is easy. Make the UI dark theme, 
+  rounded corners, nice spacing, and responsive for small screens. Can also add 
+  hover effects and smooth animations if needed.
+-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Rock Paper Scissors</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Rock Paper Scissors</h1>
+
+    <div class="scoreboard">
+      <div class="score">
+        <h2>You</h2>
+        <span id="player-score">0</span>
+      </div>
+      <div class="vs">vs</div>
+      <div class="score">
+        <h2>Computer</h2>
+        <span id="computer-score">0</span>
+      </div>
+    </div>
+
+    <div class="round-tracker">
+      Round <span id="round-number">1</span>/5
+    </div>
+
+    <div class="choices">
+      <button id="rock" class="choice-button">🪨<br>Rock</button>
+      <button id="paper" class="choice-button">📄<br>Paper</button>
+      <button id="scissors" class="choice-button">✂️<br>Scissors</button>
+    </div>
+
+    <div class="display-choices">
+      <div>Your choice:<br><span id="player-choice">?</span></div>
+      <div>Computer’s choice:<br><span id="computer-choice">?</span></div>
+    </div>
+
+    <div class="message">
+      <p id="result-message">Make your choice!</p>
+    </div>
+
+    <button id="reset-button">🔁 Reset Game</button>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

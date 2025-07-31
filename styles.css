@@ -1,0 +1,303 @@
+
+/* 
+Prompt:
+Apply full-screen background with diagonal stripes for dark aesthetic. Center everything using flexbox.
+Also remove default margins and paddings. Use 'Segoe UI' font and white text. 
+This styling is for the <body> tag.
+*/
+body {
+  background: linear-gradient(135deg, #1e2235 25%, transparent 25%) -50px 0,
+              linear-gradient(225deg, #1e2235 25%, transparent 25%) -50px 0,
+              linear-gradient(315deg, #1e2235 25%, transparent 25%),
+              linear-gradient(45deg, #1e2235 25%, transparent 25%);
+  background-size: 100px 100px;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  font-family: 'Segoe UI', sans-serif;
+  color: white;
+}
+
+/* 
+Prompt:
+Style the main box (.container):
+- dark background box
+- rounded corners and padding
+- add a soft box shadow
+- max width around 400px
+- center-align all text
+*/
+.container {
+  background-color: #1e2235;
+  padding: 2rem;
+  border-radius: 20px;
+  box-shadow: 0 0 30px rgba(0, 0, 0, 0.5);
+  width: 90%;
+  max-width: 400px;
+  text-align: center;
+}
+
+/* 
+Prompt:
+Style the main game heading inside .container:
+- teal color text
+- medium font size
+- spacing below title
+*/
+h1 {
+  font-size: 1.8rem;
+  color: #79f2c0;
+  margin-bottom: 1rem;
+}
+
+
+/* 
+Prompt:
+Inside .score, make player/computer labels and score numbers:
+- h2: small white label (e.g. "You")
+- span: bigger, teal color number
+- score should be bold and vertically stacked
+*/
+.score h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #ffffff;
+}
+
+.score span {
+  font-size: 2rem;
+  display: block;
+  margin-top: 0.3rem;
+  color: #79f2c0;
+}
+
+
+
+
+/* 
+Prompt:
+Style round tracker bar (.round-tracker):
+- dark box with blue text
+- rounded edges and padding
+- bold font
+- shows which round we are in
+*/
+.round-tracker {
+  background-color: #2c3149;
+  padding: 0.5rem;
+  border-radius: 8px;
+  margin: 1rem 0;
+  color: #62a2ff;
+  font-weight: bold;
+}
+
+
+/* 
+Prompt:
+Arrange the 3 choice buttons (.choices):
+- display in one row using flex
+- space between them
+- little margin below
+*/
+.choices {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+  
+}
+
+
+
+
+
+/* 
+Prompt:
+Style rock/paper/scissors buttons (.choice-button):
+- dark background with white text
+- rounded corners and padding
+- make all same width (30%)
+- add cursor pointer
+- smooth hover effect
+*/
+.choice-button {
+  background-color: #2c3149;
+  color: white;
+  border: none;
+  padding: 1rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  width: 30%;
+  transition: 0.3s ease;
+}
+
+
+/* 
+Prompt:
+Add hover effect for .choice-button:
+- slightly darker background
+- make the transition smooth
+*/
+.choice-button:hover {
+  background-color: #3e4561;
+}
+
+
+
+/* 
+Prompt:
+Show your and computer choices side by side (.display-choices):
+- two boxes in one row using flex
+- dark background, rounded corners, padded
+- gap between the two
+*/
+.display-choices {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0;
+  margin: 1rem;
+  gap: 1rem;
+}
+
+
+/* 
+Prompt:
+Each choice box inside .display-choices:
+- width around 45%
+- white text and small font
+- padding and round edges
+*/
+.display-choices div {
+  background-color: #2c3149;
+  border-radius: 10px;
+  padding: 0.8rem;
+  width: 45%;
+  font-size: 0.9rem;
+}
+
+
+/* 
+Prompt:
+Emoji choices for player and computer (#player-choice and #computer-choice):
+- make font bigger
+- small top margin
+- keep it below the label text
+*/
+#player-choice,
+#computer-choice {
+  display: block;
+  font-size: 1.4rem;
+  margin-top: 0.5rem;
+}
+
+
+
+
+
+/* 
+Prompt:
+Style the game result message box (#result-message inside .message):
+- dark box with rounded edges
+- bold text
+- bit of padding
+- shown below choices
+*/
+.message p {
+  font-weight: bold;
+  background-color: #2c3149;
+  border-radius: 10px;
+  padding: 0.6rem;
+}
+
+#reset-button {
+  margin-top: 1rem;
+  background-color: #f39c12;
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+
+
+
+/* 
+Prompt:
+Style reset button (#reset-button):
+- orange background with white bold text
+- rounded corners
+- padded and easy to click
+- hover changes to darker orange
+*/
+#reset-button:hover {
+  background-color: #e67e22;
+  transition: 0.3s ease;
+}
+
+
+
+
+/* 
+Prompt:
+Style the scoreboard row (.scoreboard):
+- display flex to show player score, computer score, and vs in one row
+- space between items
+- dark background with rounded corners
+- add padding and some gap between divs
+*/
+.scoreboard {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #2c2f4a;
+  padding: 1rem;
+  border-radius: 12px;
+  gap: 1rem; /* Adds spacing between elements */
+}
+
+/* 
+Prompt:
+Style both score blocks (.score):
+- center the text
+- white color
+- let both player and computer blocks take equal width using flex: 1
+*/
+.score {
+  text-align: center;
+  color: #ffffff;
+  flex: 1; /* Equal space on left and right */
+}
+
+
+
+/* 
+Prompt:
+Style the "vs" circle (.vs) between the two scores:
+- red background
+- white bold text
+- fully round using border-radius 50%
+- fixed size, text centered using flexbox
+*/
+.vs {
+  background-color: #e74c3c;
+  color: white;
+  font-weight: bold;
+  padding: 0.5rem 1rem;
+  border-radius: 50%;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 0.9rem;
+  min-width: 40px;
+  height: 40px;
+}
+
