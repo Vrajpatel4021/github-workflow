@@ -4,7 +4,7 @@ A modern and interactive **Rock, Paper, Scissors** game built using **HTML, CSS,
 
 ## 🚀 Live Demo
 
-[🔗 Play the Game](playful-sopapillas-7aee76.netlify.app) *(Replace with your actual link)*
+[🔗 Play the Game](https://playful-sopapillas-7aee76.netlify.app/) *(Replace with your actual link)*
 
 ## 🧠 Features
 
